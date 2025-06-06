@@ -1,8 +1,8 @@
 import unittest
 
-import book
-from book import Book
+from book_manager.book import Book
 from book_manager import BookManager
+
 
 class TestBook(unittest.TestCase):
     def test_book_creation(self):
