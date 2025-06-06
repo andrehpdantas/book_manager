@@ -34,7 +34,8 @@ class TestBook(unittest.TestCase):
         book = Book(title, author, isbn)
         book_manager.add_book(book)
 
-        self.assertEqual(book_manager.get_book_qty(), 1)
+        book_list = book_manager.list_books()
+        self.assertIn(book, book_list)
 
 
 if __name__ == '__main__':
