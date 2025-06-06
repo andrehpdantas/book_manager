@@ -36,6 +36,7 @@ class TestBook(unittest.TestCase):
 
         book_list = book_manager.list_books()
         self.assertIn(book, book_list)
+        self.assertRaises(ValueError, book_manager.add_book, book)
 
 
 if __name__ == '__main__':
